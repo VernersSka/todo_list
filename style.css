@@ -1,0 +1,62 @@
+/** @format */
+
+body {
+  min-height: 1000px;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.todo__item {
+  display: grid;
+  grid-template-columns: 25px 1fr 37px;
+}
+
+.todo__options {
+  opacity: 0;
+}
+
+.todo__item:hover > .todo__options {
+  opacity: 1;
+}
+
+.template {
+  display: none;
+}
+
+.todo__item .description {
+  /*
+  word-wrap: break-word;
+  word-break: break-all;
+  */
+}
+
+.todo__edit-input {
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.todo__item--initial .todo__save,
+.todo__item--initial .todo__cancel,
+.todo__item--edit .todo__edit,
+.todo__item--edit .todo__delete,
+.todo__item--edit .todo__description {
+  display: none;
+}
+
+.todo__item--edit .todo__save,
+.todo__item--edit .todo__cancel,
+.todo__item--initial .todo__edit,
+.todo__item--initial .todo__delete,
+.todo__item--initial .todo__description {
+  display: initial;
+}
+
+.done {
+  align-self: center;
+}
+
+.done[checked='true'] + .todo__description {
+  text-decoration: line-through;
+}
